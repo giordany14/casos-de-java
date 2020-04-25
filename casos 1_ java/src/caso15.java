@@ -10,7 +10,17 @@ public class caso15 {
 		System.out.println("Introduce el precio: ");
 		precio = obj.nextFloat();
 		
-		importe = (float)(cantidad * precio);
+		importe = cantidad * precio;
+		
+		dolar = (float)(importe/3.24);
+		euro = (float)(importe/3.75);
+		System.out.println("---Resultado---");
+		
+		System.out.println("El importe fue de: "+ importe);
+		System.out.println("En dolares: "+ dolar);
+		System.out.println("En euros: "+ euro) ;
+		
+		
 		
 		
 
