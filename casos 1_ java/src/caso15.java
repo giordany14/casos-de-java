@@ -1,8 +1,9 @@
 import java.util.Scanner;
+import java.text.DecimalFormat;
 public class caso15 {
 
 	public static void main(String[] args) {
-		
+		DecimalFormat text= new DecimalFormat("#.00");
 		Scanner obj = new Scanner(System.in);
 		float cantidad,precio,importe,dolar, euro;
 		System.out.println("Introduce una cantidad: ");
@@ -16,9 +17,9 @@ public class caso15 {
 		euro = (float)(importe/3.75);
 		System.out.println("---Resultado---");
 		
-		System.out.println("El importe fue de: "+ importe);
-		System.out.println("En dolares: "+ dolar);
-		System.out.println("En euros: "+ euro) ;
+		System.out.println("El importe fue de: "+ text.format(importe));
+		System.out.println("En dolares: "+ text.format(dolar));
+		System.out.println("En euros: "+ text.format(euro)) ;
 		
 		
 		
