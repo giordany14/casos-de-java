@@ -10,6 +10,7 @@ public class caso20 {
 		venta = obj.nextFloat();
 		incremento = (float)(venta * 0.42);
 		resultado = incremento + venta;
+		System.out.println("--RESULTADO--");
 		System.out.println("El incremento de tu venta es: "+ T.format(resultado));
 		
 
