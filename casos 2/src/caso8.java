@@ -7,23 +7,23 @@ public class caso8 {
 		System.out.print("Ingrese un numero: ");
 		nota = obj.nextInt();
 		String mensaje = " ";
-		if (7 > nota && nota > 0) {
+		if (7 >= nota && nota >= 0) {
 			mensaje = "Sin palabras";
 		}
 		else {
-			if (10 > nota && nota > 8) {
+			if (10 >= nota && nota >= 8) {
 				 mensaje = "Malo";
 			}
 			else {
-				if (14 > nota && nota> 11) {
+				if (14 >= nota && nota>=11) {
 					 mensaje = "Regular";
 				}
 				else {
-					if (17 > nota && nota > 15) {
+					if (17 >= nota && nota >= 15) {
 						 mensaje = "Notable";
 					}
 					else {
-						if(20 > nota && nota > 18) {
+						if(20 >= nota && nota >= 18) {
 							 mensaje = "Excelente";
 						}
 						else { 

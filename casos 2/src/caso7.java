@@ -7,11 +7,11 @@ public class caso7 {
 		System.out.print("Introduce su sueldo: ");
 		sueldo = obj.nextFloat();
 		impuesto = 0;
-		if (1500 > sueldo) {
+		if (1500 >= sueldo) {
 			impuesto = (float)(sueldo * 0.03);
 		}
 		else {
-			if (3000 > sueldo && sueldo > 1500) {
+			if (3000 >= sueldo ) {
 				impuesto = (float)(sueldo * 0.08);
 			}
 			else {
