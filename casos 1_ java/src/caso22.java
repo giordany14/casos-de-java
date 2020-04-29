@@ -16,7 +16,7 @@ public class caso22 {
 		System.out.println("Nota 3:");
 		n3 = obj.nextFloat();
 		
-		promedio = (float)((n1 * 1.20)+ (n2 * 1.30)+ (n3*1.50))/3;
+		promedio = (float)((n1 * 0.20)+ (n2 * 0.30)+ (n3*0.50));
 		System.out.println("---RESULTADOS---");
 		System.out.println("El alumno: "+nombre+ " obtuvo el siguiente promedio.");
 		System.out.println("Promedio obtenido es: "+ T.format(promedio));
