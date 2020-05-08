@@ -31,7 +31,7 @@ public class caso10 {
 		else {
 			descuento = 0; 
 		}
-		meta = (float)((horas_t / 70) * 100);
+		meta = (float)((horas_t * 100 )/ 70);
 		System.out.println("---RESULTADOS---");
 		System.out.println("Trabajador: "+ nombre);
 		System.out.println("Horas trabajadas: "+ horas_t);

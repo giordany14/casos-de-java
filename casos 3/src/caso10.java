@@ -3,40 +3,41 @@ public class caso10 {
 
 	public static void main(String[] args) {
 		Scanner obj = new Scanner(System.in);
-		float importe,bono , descuento , meta , neto;
+		float importe,bono , descuento , meta = 0 , neto;
 		float sueldo_mayor = 0, sueldo_menor = (float)(999999999), cant_may_tar = 0;
-		int horas_trabajo, tarifa_hora, tardanza, c = 0, meta_90 = 0;
+		int horas_t, tarifa_hora, tardanza, c = 0, meta_90 = 0;
 		String nombre = "", continuar="S", nom_sueldo_mayor = "", nom_sueldo_menor= "", may_tar = "";
 		
 		while (continuar.contentEquals("S") | continuar.contentEquals("s")){
 			c++;
 			System.out.println("============================");
-			System.out.println("REsgitro de empleados ("+c+")");
+			System.out.println("Resgitro de empleados ("+c+")");
 			System.out.println("============================");
 			System.out.println("Trabajador: ");
 			nombre = obj.next();
 			System.out.println("horas trabajadas: ");
-			horas_trabajo = obj.nextInt();
+			horas_t = obj.nextInt();
 			System.out.println("tarifa por hora: ");
 			tarifa_hora = obj.nextInt();
 			System.out.println("minutos de tardanza: ");
 			tardanza = obj.nextInt();
 			
-			importe = horas_trabajo * tarifa_hora;
 			
-			if (horas_trabajo <= 50) {
+			importe = horas_t * tarifa_hora;
+			
+			if (horas_t <= 50) {
 				bono = 0;
 			}
 			else {
-				if(horas_trabajo <=60 && horas_trabajo > 50){
+				if(horas_t <=60 && horas_t > 50){
 					bono = (float)(importe * 0.02);
 				}
 				else {
-					if(horas_trabajo<=70 && horas_trabajo > 60){
+					if(horas_t<=70 && horas_t > 60){
 						bono = (float)(importe * 0.08);
 					}
 					else {
-						if(horas_trabajo<=80 && horas_trabajo > 70) {
+						if(horas_t<=80 && horas_t > 70) {
 							bono = (float)(importe * 0.13);
 						}
 						else {
@@ -45,6 +46,7 @@ public class caso10 {
 					}
 				}
 			}
+			
 			if (tardanza <= 15) {
 				descuento = 0;
 			}
@@ -56,6 +58,7 @@ public class caso10 {
 					descuento = (float)((importe * 0.005) * tardanza);
 				}
 			}
+			
 			if (tardanza > cant_may_tar) {
 				may_tar = nombre;
 				cant_may_tar = tardanza;
@@ -72,10 +75,11 @@ public class caso10 {
 				nom_sueldo_menor = nombre;
 			}
 			
-			meta = (horas_trabajo/80) * 100;
+			meta = (float)((horas_t * 100)/ 80);
 			if(meta >= 90) {
 				meta_90++;
 			}
+			
 			System.out.println("===========================");
 			System.out.println("========Resultados=========");
 			System.out.println("===========================");
@@ -84,7 +88,7 @@ public class caso10 {
 			System.out.println("Descuento: "+ descuento);
 			System.out.println("Sueldo neto: "+ neto);
 			System.out.println("% alcanzado: "+ meta+ "%");
-			
+			obj.nextLine();
 			System.out.println("¿Nuevo empleado? <S/N>: ");
 			continuar = obj.next();
 
